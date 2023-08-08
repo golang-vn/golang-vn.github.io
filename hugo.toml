@@ -1,0 +1,4 @@
+baseURL = 'http://golang.vn'
+languageCode = 'en-us'
+title = 'Yet Another Coding Blog'
+theme = 'loveit'
