@@ -1,4 +1,4 @@
 baseURL = 'https://golang-vn.github.io'
 languageCode = 'en-us'
 title = 'Yet Another Coding Blog'
-theme = 'contrast-hugo'
+theme = 'loveit'
