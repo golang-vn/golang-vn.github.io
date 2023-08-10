@@ -3,13 +3,102 @@
     extended = true
     min = "0.62.0"
 
+# theme
+# 主题
+theme = "LoveIt"
+# themes directory
+# 主题目录
+themesDir = "themes"
+
+# website title
+# 网站标题
+title = "GolangVN"
+
+# determines default content language ["en", "zh-cn", "fr", "pl", ...]
+# 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
+defaultContentLanguage = "en"
+# language code ["en", "zh-CN", "fr", "pl", ...]
+# 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+# language name ["English", "简体中文", "Français", "Polski", ...]
+# 语言名称 ["English", "简体中文", "Français", "Polski", ...]
+languageName = "English"
+# whether to include Chinese/Japanese/Korean
+# 是否包括中日韩文字
+hasCJKLanguage = false
+
+# default amount of posts in each pages
+# 默认每页列表显示的文章数目
+paginate = 12
+# google analytics code [UA-XXXXXXXX-X]
+# 谷歌分析代号 [UA-XXXXXXXX-X]
+googleAnalytics = ""
+# copyright description used only for seo schema
+# 版权描述，仅仅用于 SEO
+copyright = ""
+
+# whether to use robots.txt
+# 是否使用 robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+# 是否使用 git 信息
+enableGitInfo = true
+# whether to use emoji code
+# 是否使用 emoji 代码
+enableEmoji = true
+
+# ignore some build errors
+# 忽略一些构建错误
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+# Author config
+# 作者配置
+[author]
+  name = "xxxx"
+  email = ""
+  link = ""
+
+# Menu config
+# 菜单配置
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    # 当您将鼠标悬停在此菜单链接上时, 将显示标题
+    title = ""
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+
 [params]
   # site default theme ["auto", "light", "dark"]
   # 网站默认主题 ["auto", "light", "dark"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = ""
+  gitRepo = "https://github.com/golang-vn"
   # which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
@@ -23,7 +112,7 @@
   title = "Yet Another Coding Blog..."
   # website description for RSS, SEO, Open Graph and Twitter Cards
   # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
-  description = "This is my cool site"
+  description = "This is my tech blog"
   # website images for Open Graph and Twitter Cards
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = []
@@ -49,7 +138,7 @@
       name = "Yet Another Coding Blog..."
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = ""
+      pre = "<i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
@@ -81,7 +170,7 @@
     icp = ""
     # license info (HTML format is supported)
     # 许可协议信息 (支持 HTML 格式)
-    license= ""
+    license= '<a rel="license external nofollow noopener noreffer" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPL-3.0</a>'
 
   # Section (all posts) page config
   # Section (所有文章) 页面配置
@@ -134,10 +223,10 @@
   # Search config
   # 搜索配置
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["lunr", "algolia"]
     # 搜索引擎的类型 ["lunr", "algolia"]
-    type = "lunr"
+    type = "algolia"
     # max index length of the chunked content
     # 文章内容最长索引长度
     contentLength = 4000
@@ -176,13 +265,13 @@
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = ""
+      avatarURL = "/images/avatar.png"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # subtitle shown in home page (HTML format is supported)
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "Bash, C, C++, Delphi, Golang, Powershell, Python, Rust"
+      subtitle = "Bash, C, C++, Delphi, Go, Powershell, Python, Rust, VB6"
       # whether to use typeit animation for subtitle
       # 是否为副标题显示打字机动画
       typeit = true
@@ -209,10 +298,10 @@
     Facebook = "tuanhace"
     Telegram = "tuanhace"
     Medium = "tuanhace"
-    Gitlab = ""
-    Youtubelegacy = ""
-    Youtubecustom = ""
-    Youtubechannel = ""
+    Gitlab = "tuanhace"
+    Youtubelegacy = "tuanhace"
+    Youtubecustom = "tuanhace"
+    Youtubechannel = "phedev"
     Tumblr = ""
     Quora = ""
     Keybase = ""
@@ -229,7 +318,7 @@
     Xing = ""
     Snapchat = ""
     Soundcloud = ""
-    Spotify = ""
+    Spotify = "tuanhace"
     Bandcamp = ""
     Paypal = ""
     Fivehundredpx = ""
@@ -240,11 +329,11 @@
     Hackernews = ""
     Kickstarter = ""
     Patreon = ""
-    Steam = ""
+    Steam = "tuanhace"
     Twitch = ""
     Strava = ""
-    Skype = ""
-    Whatsapp = ""
+    Skype = "tuanhace"
+    Whatsapp = "+84912641222"
     Zhihu = ""
     Douban = ""
     Angellist = ""
@@ -253,7 +342,7 @@
     Deviantart = ""
     Behance = ""
     Dribbble = ""
-    Wordpress = ""
+    Wordpress = "tuanhace"
     Vine = ""
     Googlescholar = ""
     Researchgate = ""
@@ -264,7 +353,7 @@
     XMPP = ""
     Matrix = ""
     Bilibili = ""
-    Discord = ""
+    Discord = "tuanhace"
     DiscordInvite = ""
     Lichess = ""
     ORCID = ""
@@ -352,7 +441,7 @@
     [params.page.mapbox]
       # access token of Mapbox GL JS
       # Mapbox GL JS 的 access token
-      accessToken = ""
+      accessToken = "pk.eyJ1IjoidHVhbmhhY2UiLCJhIjoiY2xsNHowc3kwMDh2OTNkcGI4MXhuYjdxNiJ9.eB8LQhBhFelNAjEnsgtxJg"
       # style for the light theme
       # 浅色主题的地图样式
       lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
@@ -401,7 +490,7 @@
     # Comment config
     # 评论系统设置
     [params.page.comment]
-      enable = false
+      enable = true
       # Disqus comment config (https://disqus.com/)
       # Disqus 评论系统设置 (https://disqus.com/)
       [params.page.comment.disqus]
@@ -523,8 +612,8 @@
       # Publisher info
       # 出版者信息
       [params.page.seo.publisher]
-        name = ""
-        logoUrl = ""
+        name = "tuanhace"
+        logoUrl = "/images/avatar.png"
 
   # TypeIt config
   # TypeIt 配置
